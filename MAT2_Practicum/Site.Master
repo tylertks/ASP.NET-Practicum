@@ -53,6 +53,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/ListCourses">Avalible Courses</a></li>
+                        <li><a runat="server" href="~/TrackRegistrations">Manage Registrations</a></li>
+                        <li><a runat="server" href="~/ManageCancellations">Manage Cancellations</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
