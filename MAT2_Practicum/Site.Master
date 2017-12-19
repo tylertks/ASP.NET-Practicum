@@ -48,16 +48,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div class="jumbotron"><h1 class="display-3">Class Regestration</h1></div>
+                    <div class="jumbotron"><h1 class="display-3">Class Registration</h1></div>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/ListCourses">Avalible Courses</a></li>
-                        <li><a runat="server" href="~/TrackRegistrations">Manage Registrations</a></li>
                         <li><a runat="server" href="~/RegisterForCourse">Register for a Course</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/TrackRegistrations">Manage Registrations</a></li>
+                        <li><a runat="server" href="~/About">About Us</a></li>
                     </ul>
                 </div>
             </div>

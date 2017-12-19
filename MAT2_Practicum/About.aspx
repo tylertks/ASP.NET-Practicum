@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
-        <p>Test</p>
+        <p>Cullen Hmuphries</p>
+        <p>Tyler Sikkema</p>
+        <p> Matt Kincaid</p>
     </div>
 </asp:Content>

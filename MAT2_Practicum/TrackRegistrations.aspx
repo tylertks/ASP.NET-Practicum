@@ -50,7 +50,9 @@
             <asp:Parameter Name="original_Cancelled" Type="Boolean" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" DataSourceID="SqlDataSource2" Height="50px" Width="125px"  AutoPostback="True">
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="ID" 
+        DataSourceID="SqlDataSource2" Height="50px" Width="125px"  AutoPostback="True"
+        OnItemUpdated="DetailsView1_ItemUpdated1">
         <Fields>
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="StudentID" HeaderText="StudentID" SortExpression="StudentID" />

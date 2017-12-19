@@ -11,7 +11,10 @@ namespace MAT2_Practicum
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Auth"] != "true")
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }

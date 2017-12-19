@@ -12,8 +12,10 @@ namespace MAT2_Practicum
         int i = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataBind();
-
+            if (Session["Auth"] != "true")
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
 
         protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
@@ -26,6 +28,12 @@ namespace MAT2_Practicum
             GridView1.DataBind();
             Response.Redirect("Default.aspx");
 
+        }
+
+        protected void DetailsView1_ItemUpdated1(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            //SqlDataSource2.Update();
+            GridView1.DataBind();
         }
     }
 }
