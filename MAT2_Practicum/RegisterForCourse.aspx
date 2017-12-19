@@ -2,11 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="StudentID">
+    <div class="text-center">
+        <div class="row">
+    Select a Student:&nbsp;&nbsp;&nbsp;    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="StudentID">
     </asp:DropDownList>
+            </div>
+        <br />
+       <div class ="row">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [StudentID], [UserName] FROM [Students]"></asp:SqlDataSource>
+    Select a Class:&nbsp;&nbsp;&nbsp;
     <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="true" DataSourceID="SqlDataSource2" DataTextField="Title" DataValueField="CourseCode">
     </asp:DropDownList>
+           </div>
+        <br />
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
         DeleteCommand="DELETE FROM [Registrants] WHERE [ID] = ? AND (([StudentID] = ?) OR ([StudentID] IS NULL AND ? IS NULL)) AND (([CourseCode] = ?) OR ([CourseCode] IS NULL AND ? IS NULL)) AND [Cancelled] = ?" 
         InsertCommand="INSERT INTO [Registrants] ([StudentID], [CourseCode], [Cancelled]) VALUES (?, ?, ?)" 
@@ -40,8 +48,13 @@
             
         </UpdateParameters>
     </asp:SqlDataSource>
+        <div class ="row">
+    Regester Student into class:&nbsp;&nbsp;&nbsp;
     <asp:Button ID="Button1" runat="server" Text="Register" AutoPostback="true" OnClick="Button1_Click"/>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource3">
+            </div>
+                    <br />
+        <div class="row">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource3" HorizontalAlign="Center">
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="StudentID" HeaderText="StudentID" SortExpression="StudentID" />
@@ -50,5 +63,7 @@
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Courses]"></asp:SqlDataSource>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label1"   runat="server"></asp:Label>
+        </div>
+        </div>
 </asp:Content>

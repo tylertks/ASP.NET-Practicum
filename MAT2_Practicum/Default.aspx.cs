@@ -13,6 +13,7 @@ namespace MAT2_Practicum
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["Auth"] = "false";
+            Panel1.Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,6 +39,11 @@ namespace MAT2_Practicum
             {
                 Session["Auth"] = "true";
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
         }
     }
 }

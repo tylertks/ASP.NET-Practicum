@@ -12,11 +12,17 @@
             <asp:TextBox ID="TextBox6" runat="server" TextMode="Password"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="Button2" runat="server" Text="Button" OnClick="Button2_Click" />
+            <asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
         </p>
+        <p>
+            <asp:Button ID="Button3" runat="server" Font-Size="Small" Height="22px" OnClick="Button3_Click" Text="Create New User" Width="137px" />
+        </p>
+        
+        
     </div>
 
     <p>
+        <asp:Panel ID="Panel1" runat="server" Visible="False">
         <div>
         Register a Student:<p>
         First Name:&nbsp;&nbsp;&nbsp;
@@ -52,4 +58,5 @@
             </SelectParameters>
         </asp:SqlDataSource>
         </div>
+            </asp:Panel>
 </asp:Content>
