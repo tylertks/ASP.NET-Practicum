@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+    <div class="row text-center">
         <p>Cullen Hmuphries</p>
         <p>Tyler Sikkema</p>
         <p> Matt Kincaid</p>
