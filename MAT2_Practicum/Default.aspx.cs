@@ -38,6 +38,7 @@ namespace MAT2_Practicum
             if(TextBox6.Text == view[0][1].ToString())
             {
                 Session["Auth"] = "true";
+                Response.Redirect("ListCourses.aspx");
             }
         }
 

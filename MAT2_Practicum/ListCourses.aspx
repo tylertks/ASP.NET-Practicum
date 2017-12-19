@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Courses]"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="CourseCode" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="CourseCode" DataSourceID="SqlDataSource1"  HorizontalAlign="Center">
         <Columns>
             <asp:BoundField DataField="CourseCode" HeaderText="CourseCode" ReadOnly="True" SortExpression="CourseCode" />
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />

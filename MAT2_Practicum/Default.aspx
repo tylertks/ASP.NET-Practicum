@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     
-    <div class="jumbotron">
+    <div class="jumbotron text-center">
         <h1>Login</h1>
         <p>Username:&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
@@ -24,6 +24,7 @@
     <p>
         <asp:Panel ID="Panel1" runat="server" Visible="False">
         <div>
+            <div class="text-center">
         Register a Student:<p>
         First Name:&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -58,5 +59,6 @@
             </SelectParameters>
         </asp:SqlDataSource>
         </div>
+            </div>
             </asp:Panel>
 </asp:Content>
