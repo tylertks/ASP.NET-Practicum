@@ -166,7 +166,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ListCourses.aspx" />
-    <Content Include="ManageCancellations.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -235,13 +234,6 @@
     </Compile>
     <Compile Include="ListCourses.aspx.designer.cs">
       <DependentUpon>ListCourses.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ManageCancellations.aspx.cs">
-      <DependentUpon>ManageCancellations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageCancellations.aspx.designer.cs">
-      <DependentUpon>ManageCancellations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
