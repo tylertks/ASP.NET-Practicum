@@ -54,9 +54,13 @@
             </div>
                     <br />
         <div class="row">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource3" HorizontalAlign="Center">
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [StudentID], [CourseCode], [Cancelled] FROM [Registrants] WHERE ([StudentID] = ?)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="DropDownList1" Name="StudentID" PropertyName="SelectedValue" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" HorizontalAlign="Center">
         <Columns>
-            <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="StudentID" HeaderText="StudentID" SortExpression="StudentID" />
             <asp:BoundField DataField="CourseCode" HeaderText="CourseCode" SortExpression="CourseCode" />
             <asp:CheckBoxField DataField="Cancelled" HeaderText="Cancelled" SortExpression="Cancelled" />

@@ -35,5 +35,10 @@ namespace MAT2_Practicum
             //SqlDataSource2.Update();
             GridView1.DataBind();
         }
+
+        protected void DetailsView1_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        {
+            GridView1.DataBind();
+        }
     }
 }

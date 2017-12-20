@@ -38,7 +38,7 @@ namespace MAT2_Practicum
             {
                 SqlDataSource3.Insert();
             }
-            
+            GridView1.DataBind();
             
         }
     }

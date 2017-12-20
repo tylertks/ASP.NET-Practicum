@@ -12,7 +12,8 @@ namespace MAT2_Practicum
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["Auth"] = "false";
+            if(Session["Auth"]!="true")
+                Session["Auth"] = "false";
             Panel1.Visible = false;
         }
 
